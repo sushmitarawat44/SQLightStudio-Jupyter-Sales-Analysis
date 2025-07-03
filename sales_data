@@ -1,0 +1,26 @@
+create table sales
+( Product text,
+Quantity Integers,
+Price real);
+
+insert into sales (product, quantity, price) values 
+('Crimson Kiwi', 7, 1.45),
+('Alpine Honey Jar', 3, 5.80),
+('Velvet Mango', 2, 2.75),
+('Sea Salt Crackers', 4, 3.10),
+('Glacier Water 500ml', 6, 1.25),
+('Basil Oat Cookies', 5, 2.40),
+('Dried Dragonfruit', 1, 4.60),
+('Smoked Tofu Block', 2, 3.90),
+('Lemon Quinoa Mix', 3, 2.85),
+('Midnight Coffee Pods', 8, 6.20);
+
+Select * from sales;
+
+Select Product from sales;
+
+Select SUM(Quantity) AS total_qty from sales;
+
+Select SUM(Quantity * Price) AS revenue from sales
+Group by Product;
+
